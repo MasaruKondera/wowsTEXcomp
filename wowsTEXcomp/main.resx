@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ChildProcessKillError" xml:space="preserve">
+    <value>Error occurred while trying to kill the child process!</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Continue?</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>[ERROR] </value>
+  </data>
+  <data name="Extracting" xml:space="preserve">
+    <value>[EXTRACTING] </value>
+  </data>
+  <data name="ExtractingWarning" xml:space="preserve">
+    <value>&lt;w&gt;Extracting &lt;m&gt;"{0}"&lt;w&gt; from the WoWs PKG files. &lt;Y&gt;This may take a while!</value>
+  </data>
+  <data name="GPUDevice" xml:space="preserve">
+    <value>Could not create a D3D11 device!</value>
+  </data>
+  <data name="InitError" xml:space="preserve">
+    <value>[INIT ERROR] </value>
+  </data>
+  <data name="ProgramUsage" xml:space="preserve">
+    <value>Do you still want to use this tool?</value>
+  </data>
+  <data name="ProgramWarning" xml:space="preserve">
+    <value>&lt;y&gt;[WARNING] This program &lt;r&gt;can delete files! &lt;y&gt;In case you continue you accept that the author of this software takes no responsibility for damages done by this software!</value>
+  </data>
+  <data name="QuestionHint" xml:space="preserve">
+    <value>Please write 'y' for yes or 'n' for no!</value>
+  </data>
+  <data name="SetCtrlHandler" xml:space="preserve">
+    <value>Could not set CtrlHandler!</value>
+  </data>
+  <data name="SystemMessage" xml:space="preserve">
+    <value>[SYSTEM MESSAGE] </value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>[WARNING] </value>
+  </data>
+  <data name="Abort" xml:space="preserve">
+    <value>Critical Error during threading operations! Aborting operation on this texture file!</value>
+  </data>
+  <data name="CompressFail" xml:space="preserve">
+    <value>Failed compressing the texture file "{0}"!</value>
+  </data>
+  <data name="DecompressFail" xml:space="preserve">
+    <value>Failed decompressing the texture file "{0}"!</value>
+  </data>
+  <data name="ExtractStartFail" xml:space="preserve">
+    <value>Could not start the extraction process!</value>
+  </data>
+  <data name="ExtractWaitError" xml:space="preserve">
+    <value>Could not wait for the extraction process!</value>
+  </data>
+  <data name="FileDirDelete" xml:space="preserve">
+    <value>&lt;y&gt;[WARNING] This program will delete all files and directories in &lt;r&gt;"{0}"</value>
+  </data>
+  <data name="FileDirOverwrite" xml:space="preserve">
+    <value>&lt;y&gt;[WARNING] This program will overwrite &lt;r&gt;"{0}"</value>
+  </data>
+  <data name="Finished" xml:space="preserve">
+    <value>[FINISHED] </value>
+  </data>
+  <data name="LoadFail" xml:space="preserve">
+    <value>Failed loading the texture file "{0}"!</value>
+  </data>
+  <data name="MipmapFail" xml:space="preserve">
+    <value>Failed generating a mipmap for the texture file "{0}"!</value>
+  </data>
+  <data name="NotHere" xml:space="preserve">
+    <value>You should not be here!</value>
+  </data>
+  <data name="ResizeFail" xml:space="preserve">
+    <value>Failed resizing the texture file "{0}"!</value>
+  </data>
+  <data name="SaveFail" xml:space="preserve">
+    <value>Failed saving the texture file "{0}"!</value>
+  </data>
+  <data name="ThreadInterrupted" xml:space="preserve">
+    <value>Thread got interrupted while waiting!</value>
+  </data>
+  <data name="ThreadMemory" xml:space="preserve">
+    <value>Not enough memory available to start this thread!</value>
+  </data>
+  <data name="ThreadState" xml:space="preserve">
+    <value>Thread has already been started or this program tried to join a thread which is in the unstarted state!</value>
+  </data>
+  <data name="UnknownError" xml:space="preserve">
+    <value>An unknown error occurred!</value>
+  </data>
+  <data name="BINEmpty" xml:space="preserve">
+    <value>No directories in the bin directory!</value>
+  </data>
+  <data name="BinFormat" xml:space="preserve">
+    <value>Could not parse a directory name in the bin directory!</value>
+  </data>
+  <data name="BinNoAccess" xml:space="preserve">
+    <value>Could not access the bin directory due to missing permissions!</value>
+  </data>
+  <data name="BinNotFound" xml:space="preserve">
+    <value>Could not find the bin directory!</value>
+  </data>
+  <data name="BinOverflow" xml:space="preserve">
+    <value>Could not parse a directory name in the bin directory!</value>
+  </data>
+  <data name="BinPathTooLong" xml:space="preserve">
+    <value>The game is at a location which is not supported by this tool. Try moving the game somewhere else!</value>
+  </data>
+  <data name="EmptyGameLocation" xml:space="preserve">
+    <value>Provided game path too short!</value>
+  </data>
+  <data name="FormatException" xml:space="preserve">
+    <value>Could not parse your scale! Check if it is a valid decimal number!</value>
+  </data>
+  <data name="GameExeNotFound" xml:space="preserve">
+    <value>Could not find the World_of_Warships.exe file in the provided game path!</value>
+  </data>
+  <data name="GameLocationNotAbsolute" xml:space="preserve">
+    <value>Provided path to the game location is not absolute!</value>
+  </data>
+  <data name="HelpNotAlone" xml:space="preserve">
+    <value>The help option can only be used when it is alone!</value>
+  </data>
+  <data name="IDXMissing" xml:space="preserve">
+    <value>The idx directory is not present!</value>
+  </data>
+  <data name="MissingArgument" xml:space="preserve">
+    <value>A prefix is missing an argument!</value>
+  </data>
+  <data name="MissingPKG" xml:space="preserve">
+    <value>Missing the res_packages directory!</value>
+  </data>
+  <data name="PrefixIncorrect" xml:space="preserve">
+    <value>Your provided prefix was not correct. Use '-'.</value>
+  </data>
+  <data name="ScaleTooBig" xml:space="preserve">
+    <value>A scale above 1.0 is not supported!</value>
+  </data>
+  <data name="StringConversionError" xml:space="preserve">
+    <value>An error occurred while trying to convert a string!</value>
+  </data>
+  <data name="ThisExePathError" xml:space="preserve">
+    <value>An unknown error happened while trying to get the path of this executable!</value>
+  </data>
+  <data name="ThisExePathTooLong" xml:space="preserve">
+    <value>The executable file is at a location which is not supported. Try a location where the Path has a length with less than 100 characters.</value>
+  </data>
+  <data name="UnpackAccessFailure" xml:space="preserve">
+    <value>Could not access the provided unpacker target directory path! Missing permissions.</value>
+  </data>
+  <data name="UnpackArgumentException" xml:space="preserve">
+    <value>Provided path for your unpacker target directory is invalid! Check if it contains invalid characters!</value>
+  </data>
+  <data name="UnpackerNotFound" xml:space="preserve">
+    <value>Could not find the wowsunpacker.exe file in the provided directory!</value>
+  </data>
+  <data name="UnpackNotAbsolute" xml:space="preserve">
+    <value>Provided path to the unpacker target directory is not absolute!</value>
+  </data>
+  <data name="UnpackPathEmpty" xml:space="preserve">
+    <value>Provide a path for your unpacker target directory!</value>
+  </data>
+  <data name="UnpackPathIsFile" xml:space="preserve">
+    <value>Provided path for your unpacker target directory exists already as a file!</value>
+  </data>
+  <data name="UnpackPathNotFound" xml:space="preserve">
+    <value>Provided path for your unpacker target directory does not exist! Are you sure the drive is mapped?</value>
+  </data>
+  <data name="UnpackPathTooLong" xml:space="preserve">
+    <value>Provided path for your unpacker target directory is too long!</value>
+  </data>
+  <data name="WorkDirAccessFailure" xml:space="preserve">
+    <value>Could not access the provided working directory path! Missing permissions.</value>
+  </data>
+  <data name="WorkDirArgumentException" xml:space="preserve">
+    <value>Provided path for your working directory is invalid! Check if it contains invalid characters!</value>
+  </data>
+  <data name="WorkDirNotAbsolute" xml:space="preserve">
+    <value>Provided path to the working directory is not absolute!</value>
+  </data>
+  <data name="WorkDirPathEmpty" xml:space="preserve">
+    <value>Provide a path for the working directory!</value>
+  </data>
+  <data name="WorkDirPathIsFile" xml:space="preserve">
+    <value>Provided path for your working directory exists already as a file!</value>
+  </data>
+  <data name="WorkDirPathNotFound" xml:space="preserve">
+    <value>Provided path for your working directory does not exist! Are you sure the drive is mapped?</value>
+  </data>
+  <data name="WorkDirPathTooLong" xml:space="preserve">
+    <value>Provided path for your working directory is too long!</value>
+  </data>
+  <data name="WorkDirTooLong" xml:space="preserve">
+    <value>The working directory is at a location which is not supported. Try a location where the path has a length with less than 100 characters.</value>
+  </data>
+  <data name="ZipAccessFailure" xml:space="preserve">
+    <value>Could not access the provided zip path! Missing permissions.</value>
+  </data>
+  <data name="ZipArgumentException" xml:space="preserve">
+    <value>Provided path for your zip directory is invalid! Check if it contains invalid characters!</value>
+  </data>
+  <data name="ZipNotAbsolute" xml:space="preserve">
+    <value>Provided path to the zip directory is not absolute!</value>
+  </data>
+  <data name="ZipPathEmpty" xml:space="preserve">
+    <value>Provide a path for the zip directory!</value>
+  </data>
+  <data name="ZipPathIsFile" xml:space="preserve">
+    <value>Provided path for your zip directory exists already as a file!</value>
+  </data>
+  <data name="ZipPathNotFound" xml:space="preserve">
+    <value>Provided path for your zip directory does not exist! Are you sure the drive is mapped?</value>
+  </data>
+  <data name="ZipPathTooLong" xml:space="preserve">
+    <value>Provided path for your zip directory is too long!</value>
+  </data>
+  <data name="DeleteWarning" xml:space="preserve">
+    <value>&lt;y&gt;Deleting all files and directories in &lt;m&gt;"{0}"&lt;y&gt;. This may take a while!</value>
+  </data>
+  <data name="GameLocationInvalidPath" xml:space="preserve">
+    <value>Provided game location contains invalid characters!</value>
+  </data>
+  <data name="UnpackInvalidPath" xml:space="preserve">
+    <value>Provided unpacker destination path contains invalid characters!</value>
+  </data>
+  <data name="WorkDirInvalidPath" xml:space="preserve">
+    <value>Provided working directory path contains invalid characters!</value>
+  </data>
+  <data name="ZipFinished" xml:space="preserve">
+    <value>Finished creating a zip file!</value>
+  </data>
+  <data name="ZipInvalidName" xml:space="preserve">
+    <value>Provided Zip filename contains invalid characters!</value>
+  </data>
+  <data name="ZipInvalidPath" xml:space="preserve">
+    <value>Provided Zip directory path contains invalid characters!</value>
+  </data>
+  <data name="ZipWarning" xml:space="preserve">
+    <value>Starting to create an archive! This will take a while!</value>
+  </data>
+  <data name="DeleteIOExe" xml:space="preserve">
+    <value>Could not delete a file or directory because it is still in use by another program!</value>
+  </data>
+  <data name="DeleteNoAccess" xml:space="preserve">
+    <value>Could not access the file or directory! Missing permissions.</value>
+  </data>
+  <data name="ZipIOExe" xml:space="preserve">
+    <value>Could not finalize the zip file because a file is still in use by another program!</value>
+  </data>
+  <data name="ZipNamePathTooLong" xml:space="preserve">
+    <value>Provided path combined with the filename is too long!</value>
+  </data>
+  <data name="UsageLine0" xml:space="preserve">
+    <value>WoWsTexComp - by IsamuKondera 2021</value>
+  </data>
+  <data name="UsageLine1" xml:space="preserve">
+    <value>Version 1.0</value>
+  </data>
+  <data name="UsageLine10" xml:space="preserve">
+    <value>-o  -O &lt;path&gt;        Path to the Zip directory</value>
+  </data>
+  <data name="UsageLine11" xml:space="preserve">
+    <value>-z  -Z &lt;name&gt;        Zip Filename</value>
+  </data>
+  <data name="UsageLine12" xml:space="preserve">
+    <value>Additional Information:</value>
+  </data>
+  <data name="UsageLine13" xml:space="preserve">
+    <value>* This tool only supports direct paths!</value>
+  </data>
+  <data name="UsageLine14" xml:space="preserve">
+    <value>* To zip the scaled images, provide either option -o or -o and -z!</value>
+  </data>
+  <data name="UsageLine15" xml:space="preserve">
+    <value>* Can be used to scale user mods as well! For this provide the option -n for not extracting a file and provide the path to the mod via -e</value>
+  </data>
+  <data name="UsageLine2" xml:space="preserve">
+    <value>usage: wowstexcomp.exe [OPTIONS...]</value>
+  </data>
+  <data name="UsageLine3" xml:space="preserve">
+    <value>Options:</value>
+  </data>
+  <data name="UsageLine4" xml:space="preserve">
+    <value>-h  -H               Show this help</value>
+  </data>
+  <data name="UsageLine5" xml:space="preserve">
+    <value>-n  -N               Do not extract files</value>
+  </data>
+  <data name="UsageLine6" xml:space="preserve">
+    <value>-e  -E &lt;path&gt;        Path for extractor output</value>
+  </data>
+  <data name="UsageLine7" xml:space="preserve">
+    <value>-g  -G &lt;path&gt;        Path to your World of Warships installation</value>
+  </data>
+  <data name="UsageLine8" xml:space="preserve">
+    <value>-s  -S &lt;scale&gt;       Scale in decimal e.g. 0.25 =&gt; 25%</value>
+  </data>
+  <data name="UsageLine9" xml:space="preserve">
+    <value>-w  -W &lt;path&gt;        Path to the directory where this tool will place all scaled files</value>
+  </data>
+</root>
