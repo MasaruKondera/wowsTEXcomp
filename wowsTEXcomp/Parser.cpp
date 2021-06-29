@@ -104,6 +104,7 @@ ReturnValue::Parser Parser::ParseArgs(array<String ^> ^args)
 				case 'n':
 				case 'N':
 					extract = false;
+					argsParsed++;
 					break;
 				case 'o':
 				case 'O':
