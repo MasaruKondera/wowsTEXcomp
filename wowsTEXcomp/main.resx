@@ -373,7 +373,7 @@
     <value>WoWsTexComp - by IsamuKondera 2021</value>
   </data>
   <data name="UsageLine1" xml:space="preserve">
-    <value>Version 1.0</value>
+    <value>Version 1.0.1</value>
   </data>
   <data name="UsageLine10" xml:space="preserve">
     <value>-o  -O &lt;path&gt;        Path to the Zip directory</value>
