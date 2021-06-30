@@ -132,7 +132,15 @@ int main(array<String ^> ^args)
 	}
 	else
 	{
-		textureProcessor = gcnew TextureProcessing(parser, pDevice);
+		try
+		{
+			textureProcessor = gcnew TextureProcessing(parser, pDevice);
+		}
+		catch(NoDDSFiles^ ndf)
+		{
+			Writer::PrintColoredLocalizedText(Writer::lang->GetString(ndf->Message), parser->unpackerTargetDirectory);
+			return -1;
+		}
 	}
 	textureProcessor->StartImagePipe();
 	Console::ForegroundColor = ConsoleColor::White;

@@ -284,71 +284,68 @@ ReturnValue::Parser Parser::ParseArgs(array<String ^> ^args)
 		}
 	}
 
-	if (this->extract)
+	if (!this->unpackerTargetDirectory->Length)
 	{
-		if (!this->unpackerTargetDirectory->Length)
-		{
-			Writer::ParseError(ReturnValue::Parser::UNPACK_PATH_EMPTY);
-			return ReturnValue::Parser::UNPACK_PATH_EMPTY;
-		}
+		Writer::ParseError(ReturnValue::Parser::UNPACK_PATH_EMPTY);
+		return ReturnValue::Parser::UNPACK_PATH_EMPTY;
+	}
 
-		if (this->unpackerTargetDirectory->IndexOfAny(Path::GetInvalidPathChars()) >= 0)
-		{
-			return ReturnValue::Parser::UNPACK_INVALID_PATH;
-		}
+	if (this->unpackerTargetDirectory->IndexOfAny(Path::GetInvalidPathChars()) >= 0)
+	{
+		return ReturnValue::Parser::UNPACK_INVALID_PATH;
+	}
 
-		std::string input;
-		if (!this->GetStdString(input, this->unpackerTargetDirectory))
+	if (!this->GetStdString(input, this->unpackerTargetDirectory))
+	{
+		Writer::ParseError(ReturnValue::Parser::STRING_CONVERSION_ERROR);
+		return ReturnValue::Parser::STRING_CONVERSION_ERROR;
+	}
+	if (!std::filesystem::path(input).is_absolute())
+	{
+		Writer::ParseError(ReturnValue::Parser::UNPACK_NOT_ABSOLUTE);
+		return ReturnValue::Parser::UNPACK_NOT_ABSOLUTE;
+	}
+	if (!Directory::Exists(this->unpackerTargetDirectory))
+	{
+		if (!File::Exists(this->unpackerTargetDirectory))
 		{
-			Writer::ParseError(ReturnValue::Parser::STRING_CONVERSION_ERROR);
-			return ReturnValue::Parser::STRING_CONVERSION_ERROR;
-		}
-		if (!std::filesystem::path(input).is_absolute())
-		{
-			Writer::ParseError(ReturnValue::Parser::UNPACK_NOT_ABSOLUTE);
-			return ReturnValue::Parser::UNPACK_NOT_ABSOLUTE;
-		}
-		if (!Directory::Exists(this->unpackerTargetDirectory))
-		{
-			if (!File::Exists(this->unpackerTargetDirectory))
+			try
 			{
-				try
-				{
-					Directory::CreateDirectory(this->unpackerTargetDirectory);
-				}
-				catch (ArgumentException^)
-				{
-					Writer::ParseError(ReturnValue::Parser::UNPACK_ARGUMENT_EXCEPTION);
-					return ReturnValue::Parser::UNPACK_ARGUMENT_EXCEPTION;
-				}
-				catch (PathTooLongException^)
-				{
-					Writer::ParseError(ReturnValue::Parser::UNPACK_PATH_TOO_LONG);
-					return ReturnValue::Parser::UNPACK_PATH_TOO_LONG;
-				}
-				catch (DirectoryNotFoundException^)
-				{
-					Writer::ParseError(ReturnValue::Parser::UNPACK_PATH_NOT_FOUND);
-					return ReturnValue::Parser::UNPACK_PATH_NOT_FOUND;
-				}
-				catch (UnauthorizedAccessException^)
-				{
-					Writer::ParseError(ReturnValue::Parser::UNPACK_ACCESS_FAILURE);
-					return ReturnValue::Parser::UNPACK_ACCESS_FAILURE;
-				}
+				Directory::CreateDirectory(this->unpackerTargetDirectory);
 			}
-			else
+			catch (ArgumentException^)
 			{
-				Writer::ParseError(ReturnValue::Parser::UNPACK_PATH_IS_FILE);
-				return ReturnValue::Parser::UNPACK_PATH_IS_FILE;
+				Writer::ParseError(ReturnValue::Parser::UNPACK_ARGUMENT_EXCEPTION);
+				return ReturnValue::Parser::UNPACK_ARGUMENT_EXCEPTION;
+			}
+			catch (PathTooLongException^)
+			{
+				Writer::ParseError(ReturnValue::Parser::UNPACK_PATH_TOO_LONG);
+				return ReturnValue::Parser::UNPACK_PATH_TOO_LONG;
+			}
+			catch (DirectoryNotFoundException^)
+			{
+				Writer::ParseError(ReturnValue::Parser::UNPACK_PATH_NOT_FOUND);
+				return ReturnValue::Parser::UNPACK_PATH_NOT_FOUND;
+			}
+			catch (UnauthorizedAccessException^)
+			{
+				Writer::ParseError(ReturnValue::Parser::UNPACK_ACCESS_FAILURE);
+				return ReturnValue::Parser::UNPACK_ACCESS_FAILURE;
 			}
 		}
 		else
 		{
-			Writer::WarningFileDelete(this->unpackerTargetDirectory);
-			if (Writer::Ask("Continue") == ReturnValue::Console::ABORT)
-				return ReturnValue::Parser::UNPACK_PROTECTED;
+			Writer::ParseError(ReturnValue::Parser::UNPACK_PATH_IS_FILE);
+			return ReturnValue::Parser::UNPACK_PATH_IS_FILE;
 		}
+	}
+
+	if (this->extract)
+	{
+		Writer::WarningFileDelete(this->unpackerTargetDirectory);
+		if (Writer::Ask("Continue") == ReturnValue::Console::ABORT)
+			return ReturnValue::Parser::UNPACK_PROTECTED;
 	}
 
 	if (!this->workingDir->Length)

@@ -417,4 +417,7 @@
   <data name="UsageLine9" xml:space="preserve">
     <value>-w  -W &lt;path&gt;        Path to the directory where this tool will place all scaled files</value>
   </data>
+  <data name="DDSFileNotFound" xml:space="preserve">
+    <value>&lt;r&gt;[ERROR] Could not find any dds texture files! Are you sure &lt;m&gt;"{0}" &lt;r&gt;is not empty?</value>
+  </data>
 </root>

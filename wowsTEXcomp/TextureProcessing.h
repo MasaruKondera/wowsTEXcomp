@@ -4,6 +4,10 @@
 ref class Parser;
 ref class Writer;
 
+ref struct NoDDSFiles : public System::Exception {
+	NoDDSFiles(System::String^ message) : System::Exception(message) {}
+};
+
 ref class TextureProcessing
 {
 

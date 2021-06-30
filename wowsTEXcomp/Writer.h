@@ -40,6 +40,7 @@ public:
 	static void SetStandardColor();
 
 	static System::Threading::Mutex^ colorMutex = gcnew System::Threading::Mutex();
+	static initonly System::Resources::ResourceManager^ lang;
 
 private:
 	static System::String^ HRESULTtoMessage(HRESULT error);
@@ -47,7 +48,6 @@ private:
 	static initonly System::ConsoleColor front;
 	static initonly System::ConsoleColor back;
 	static initonly System::Reflection::Assembly^ assembly;
-	static initonly System::Resources::ResourceManager^ lang;
 	static System::ConsoleColor GetColor(wchar_t symbol);
 	
 };

@@ -30,6 +30,11 @@ TextureProcessing::TextureProcessing(Parser^ parser, ID3D11Device* pDevice)
 	{
 		this->files->Add(file);
 	}
+	if (this->files->Count == 0)
+	{
+		NoDDSFiles^ exception = gcnew NoDDSFiles("DDSFileNotFound");
+		throw exception;
+	}
 	this->parser = parser;
 	this->pDevice = pDevice;
 	this->abort = false;
